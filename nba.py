@@ -158,7 +158,6 @@ def getNBA_dot_com_PlayerStats(team_short_name = None):
     stats = list()
     soup = getNBA_dot_com_PlayerStats_soup(team_short_name)
 
-    # Extract all the card bodies that hold the individual apartments
     players = soup.find("table", class_ = "stats-table player-stats season-averages hidden "\
                                           "table table-striped table-bordered sticky-enabled")
 
@@ -227,7 +226,6 @@ def getNBA_dot_com_Schedule(team_short_name = None):
     stats = list()
     soup = getNBA_dot_com_Schedule_soup(team_short_name)
 
-    # Extract all the card bodies that hold the individual apartments
     print "\n\n### {} Schedule - nba.com ###\n".format(team_short_name)
     tournaments = soup.find_all("section", class_=re.compile("schedule"))
     for tournament in tournaments:
@@ -288,7 +286,6 @@ def getNBA_dot_com_Standings():
     standings = list()
     soup = getNBA_dot_com_Standings_soup()
 
-    # Extract all the card bodies that hold the individual apartments
     teams = soup.find("table", class_ = "genStatTable mainStandings")
 
     conference = None
@@ -412,7 +409,6 @@ def getESPN_dot_com_Roster(team_short_name = None):
         raise
     soup = BeautifulSoup(data)
     
-    # Extract all the card bodies that hold the individual apartments
     players = soup.find_all("tr", class_ = re.compile("player"))
     print "\n\n### {} Roster - espn.com ###\n".format(team_short_name)
     for player in players:
