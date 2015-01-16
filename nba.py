@@ -42,6 +42,10 @@ def getNBA_dot_com_Roster(team_short_name = None):
         resp['position'] = player.find(class_ = "roster__player__header_position").string.split()[0]
 
         resp['jersey_number'] = int(player.find(class_ = "roster__player__header_jnumber").next)
+        try:
+            resp['image'] = player.find("img", class_ = "roster__player__bust").get("src")
+        except:
+            resp['image'] = None
 
         birthdate = player.find(class_="roster__player__info__bio__dob roster__player__info__bio--item").next.next.next
         resp['birthdate'] = datetime.strptime(birthdate, "%m/%d/%Y").date()
@@ -444,11 +448,11 @@ def getESPN_dot_com_Roster(team_short_name = None):
     return roster
 
 if __name__ == "__main__":
-#    getNBA_dot_com_Roster("Warriors")
+    getNBA_dot_com_Roster("Warriors")
 #    getESPN_dot_com_Roster("Warriors")
 #    getNBA_dot_com_CurrentTournament()
 #    getNBA_dot_com_PlayerStatsCurrentTournament("Warriors")
 #    getNBA_dot_com_PlayerStats("Warriors")
-    getNBA_dot_com_Standings()
+#    getNBA_dot_com_Standings()
 #    getNBA_dot_com_ScheduleCurrentTournament("Warriors")
 #    getNBA_dot_com_Schedule("Warriors")

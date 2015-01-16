@@ -19,9 +19,10 @@ results = getNBA_dot_com_Roster("Warriors")
 --output--
 ### Warriors Roster - nba.com ###
 
-first_name: Leandro  last_name: Barbosa  position: Guard  jersey_number: 19  birthdate: 1982-11-28  height: 6.3  weight: 194  
-first_name: Harrison  last_name: Barnes  position: Forward  jersey_number: 40  birthdate: 1992-05-30  height: 6.8  weight: 225  
-first_name: Andrew  last_name: Bogut  position: Center  jersey_number: 12  birthdate: 1984-11-28  height: 7.0  weight: 260  
+first_name: Leandro  last_name: Barbosa  position: Guard  jersey_number: 19  image: http://stats.nba.com/media/players/230x185/2571.png  birthdate: 1982-11-28  height: 6.3  weight: 194  
+first_name: Harrison  last_name: Barnes  position: Forward  jersey_number: 40  image: http://stats.nba.com/media/players/230x185/203084.png  birthdate: 1992-05-30  height: 6.8  weight: 225  
+first_name: Andrew  last_name: Bogut  position: Center  jersey_number: 12  image: http://stats.nba.com/media/players/230x185/101106.png  birthdate: 1984-11-28  height: 7.0  weight: 260  
+
 ...
 ----------
 
