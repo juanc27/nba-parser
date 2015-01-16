@@ -10,9 +10,9 @@ beautifulsoup4 (4.3.2)
 Examples:
 =========
 
-from nba import getNBA_dot_com_Roster, getESPN_dot_com_Roster, getNBA_dot_com_PlayerStats
-from nba import getNBA_dot_com_Standings, getNBA_dot_com_ScheduleCurrentTournament
-from nba getNBA_dot_com_Schedule
+from nba-parser import getNBA_dot_com_Roster, getESPN_dot_com_Roster, getNBA_dot_com_PlayerStats
+from nba-parser import getNBA_dot_com_Standings, getNBA_dot_com_ScheduleCurrentTournament
+from nba-parser getNBA_dot_com_Schedule
 
 results = getNBA_dot_com_Roster("Warriors")
 
